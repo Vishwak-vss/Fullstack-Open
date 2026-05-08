@@ -31,18 +31,19 @@ sequenceDiagram
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     server->>browser: HTML file
     deactivate server
-
-    activate server
+    
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes/main.css
+    activate server
     server->>browser: HTML file
     deactivate server
 
-    activate server
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes/main.js
+    activate server
     server->>browser: main.css file
     deactivate server
 
-    activate server
+    
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes/data.json
+    activate server
     server->>browser: [{"conetent": "Htmlis oop", "date": "2022-2-2"},...]
     deactivate server
